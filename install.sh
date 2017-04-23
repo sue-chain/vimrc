@@ -11,7 +11,7 @@ if [ ! -d ~/.vim ]; then
     mkdir ~/.vim
   fi
 
-# cp  ultisnips
-cp -rf vim/UltiSnips ~/.vim/bundle/
+# copy 自定义UltiSnips 模板，通过优先级覆盖原有模板 
+cp -rf vim/UltiSnips ~/.vim/
 
 # open vim install bundles :BundleInstalls
