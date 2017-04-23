@@ -15,14 +15,14 @@ Bundle 'gmarik/vundle'
 "------------------
 " Code Completions
 "------------------
-Bundle 'Shougo/neocomplcache'
+"Bundle 'Shougo/neocomplcache'
 "Bundle 'Shougo/neosnippet'
 "Bundle 'Shougo/neosnippet-snippets'
 
 Bundle 'ervandew/supertab'
 "Bundle 'garbas/vim-snipmate'
 Bundle "SirVer/ultisnips"
-Bundle 'honza/vim-snippets'
+"Bundle 'honza/vim-snippets'
 " snipmate dependencies
 "Bundle 'MarcWeber/vim-addon-mw-utils'
 "Bundle 'tomtom/tlib_vim'
@@ -62,7 +62,8 @@ Bundle "Glench/Vim-Jinja2-Syntax"
 "Python mode
 "Bundle 'klen/python-mode'
 "jedi"
-"Bundle 'davidhalter/jedi-vim'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'davidhalter/jedi-vim'
 
 
 "----------------------------------------
@@ -225,7 +226,7 @@ map <leader>9 :set syntax=vb<cr>
 map <leader>$ :syntax sync fromstart<cr>
 
 " Fast format indent of the whole file
-map <leader>g gg=G
+" map <leader>g gg=G
 
 " Fast spell checking
 map <leader>sn ]s
@@ -474,3 +475,21 @@ let g:UltiSnipsExpandTrigger = "<c-j>"
 let g:ultisnips_python_style = "NORMAL"
 "let g:UltiSnipsJumpForwardTrigger = "<c-b>"
 "let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+
+"YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_collect_identifiers_from_tag_files = 1  
+let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
+"let g:ycm_key_invoke_completion = ''
+let g:ycm_seed_identifiers_with_syntax=1
+
+"jedi
+" 光标insert状态放括号中间，有参数提示
+let g:jedi#goto_command = "<leader>d"
+let g:jedi#goto_assignments_command = "<leader>g"
+"let g:jedi#goto_definitions_command = ""
+let g:jedi#documentation_command = "K"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#rename_command = "<leader>r"
+"let g:jedi#completions_command = "<C-tab>"
