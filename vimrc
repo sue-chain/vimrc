@@ -462,7 +462,7 @@ let g:syntastic_mode_map = { 'mode': 'passive',
               \ 'passive_filetypes': [] }
 "ultisnips
 let g:UltiSnipsExpandTrigger = "<c-j>"
-let g:ultisnips_python_style = "NORMAL"
+let g:ultisnips_python_style = "google"
 "let g:UltiSnipsJumpForwardTrigger = "<c-b>"
 "let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
